@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/studentRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    tools:context=".activity.student.StudentActivity">
+
+    <TextView
+        android:id="@+id/tvQuestionCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:text="Q:1/5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvOpenCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:text="Open code browser"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/itl_question"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:hint="Question"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOpenCode">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:inputType="none"
+            android:textColor="?attr/colorOnSecondary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/rgOptionsAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itl_option4"
+        app:layout_constraintStart_toStartOf="@+id/itl_question"
+        app:layout_constraintTop_toTopOf="@+id/itl_option1">
+
+        <RadioButton
+            android:id="@+id/rbOption1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/rbOption2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/rbOption3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/rbOption4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/itl_option1"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:hint="Option 1"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/itl_question"
+        app:layout_constraintStart_toEndOf="@+id/rgOptionsAnswer"
+        app:layout_constraintTop_toBottomOf="@+id/itl_question">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_option1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false"
+            android:inputType="none"
+            android:textColor="?attr/colorOnSecondary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/itl_option2"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:hint="Option 2"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/itl_question"
+        app:layout_constraintStart_toEndOf="@+id/rgOptionsAnswer"
+        app:layout_constraintTop_toBottomOf="@+id/itl_option1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_option2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false"
+            android:inputType="none"
+            android:textColor="?attr/colorOnSecondary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/itl_option3"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:hint="Option 3"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/itl_question"
+        app:layout_constraintStart_toEndOf="@+id/rgOptionsAnswer"
+        app:layout_constraintTop_toBottomOf="@+id/itl_option2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_option3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false"
+            android:inputType="none"
+            android:textColor="?attr/colorOnSecondary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/itl_option4"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:hint="Option 4"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/itl_question"
+        app:layout_constraintStart_toEndOf="@+id/rgOptionsAnswer"
+        app:layout_constraintTop_toBottomOf="@+id/itl_option3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_option4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false"
+            android:inputType="none"
+            android:textColor="?attr/colorOnSecondary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16sdp"
+        android:clickable="true"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_correct" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

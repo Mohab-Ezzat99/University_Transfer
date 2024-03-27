@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="mrandroid.app">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Courses"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Attendance"
+        tools:targetApi="31">
+        <activity
+            android:name=".activity.auth.SignupActivity"
+            android:exported="false"
+            android:label="Signup"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity.auth.LoginActivity"
+            android:exported="false"
+            android:label="Login">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity.auth.SplashActivity"
+            android:exported="true"
+            android:label="Evaluation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity.student.StudentActivity"
+            android:exported="true"
+            android:label="Home"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".activity.doctor.DoctorActivity"
+            android:exported="true"
+            android:label="Home"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.doctor.AddQuestionActivity"
+            android:exported="true"
+            android:label="Add Question"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.student.ExamResultActivity"
+            android:exported="true"
+            android:label="Exam Result"
+            android:windowSoftInputMode="adjustResize" />
+    </application>
+
+</manifest>
