@@ -74,6 +74,12 @@ dependencies {
     //noinspection GradleDependency
     implementation 'androidx.lifecycle:lifecycle-livedata:2.3.1'
 
-    // youtube
-    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    // Google maps
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.gms:play-services-gcm:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+
+    // Easy Permissions
+    implementation 'pub.devrel:easypermissions:3.0.0'
 }
