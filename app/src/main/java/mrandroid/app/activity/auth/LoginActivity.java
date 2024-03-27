@@ -3,16 +3,10 @@ package mrandroid.app.activity.auth;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.auth.FirebaseAuth;
-
-import mrandroid.app.R;
-import mrandroid.app.activity.doctor.DoctorActivity;
-import mrandroid.app.activity.student.StudentActivity;
+import mrandroid.app.activity.main.HomeActivity;
 import mrandroid.app.databinding.ActivityLoginBinding;
-import mrandroid.app.util.Constants;
 import mrandroid.app.util.LoadingDialog;
 
 public class LoginActivity extends AppCompatActivity {
@@ -62,12 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         loadingDialog.dismiss();
                         Toast.makeText(getBaseContext(), "Welcome! Login Successfully", Toast.LENGTH_LONG).show();
-
-                        Constants.IS_Doctor =
-                                (binding.radioGroup.getCheckedRadioButtonId() == R.id.rbDoctor);
-
-                        if (Constants.IS_Doctor) startActivity(new Intent(getBaseContext(), DoctorActivity.class));
-                        else startActivity(new Intent(getBaseContext(), StudentActivity.class));
+                        startActivity(new Intent(getBaseContext(), HomeActivity.class));
                         finish();
                     } else {
                         loadingDialog.dismiss();

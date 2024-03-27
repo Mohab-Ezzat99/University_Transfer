@@ -8,7 +8,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="Courses"
+        android:label="Navigation"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Attendance"
@@ -32,8 +32,7 @@
         </activity>
         <activity
             android:name=".activity.auth.SplashActivity"
-            android:exported="true"
-            android:label="Evaluation">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,25 +43,9 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activity.student.StudentActivity"
+            android:name=".activity.main.HomeActivity"
             android:exported="true"
-            android:label="Home"
-            android:windowSoftInputMode="adjustResize"/>
-        <activity
-            android:name=".activity.doctor.DoctorActivity"
-            android:exported="true"
-            android:label="Home"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".activity.doctor.AddQuestionActivity"
-            android:exported="true"
-            android:label="Add Question"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".activity.student.ExamResultActivity"
-            android:exported="true"
-            android:label="Exam Result"
-            android:windowSoftInputMode="adjustResize" />
+            android:label="Home"/>
     </application>
 
 </manifest>

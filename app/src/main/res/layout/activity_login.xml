@@ -73,32 +73,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/tv_forgot"
-            app:layout_constraintStart_toStartOf="@+id/itl_password"
-            app:layout_constraintTop_toBottomOf="@+id/tv_forgot">
-
-            <RadioButton
-                android:id="@+id/rbStudent"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:checked="true"
-                android:text="Student" />
-
-            <RadioButton
-                android:id="@+id/rbDoctor"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Doctor" />
-        </RadioGroup>
-
         <Button
             android:id="@+id/btn_login"
             android:layout_width="0dp"
@@ -113,7 +87,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/itl_email"
             app:layout_constraintStart_toStartOf="@+id/itl_email"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_forgot" />
 
         <TextView
             android:id="@+id/tv_forgot"

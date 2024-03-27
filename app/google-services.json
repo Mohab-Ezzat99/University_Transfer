@@ -1,14 +1,13 @@
 {
   "project_info": {
-    "project_number": "24958899482",
-    "firebase_url": "https://evaluation-b5005-default-rtdb.firebaseio.com",
-    "project_id": "evaluation-b5005",
-    "storage_bucket": "evaluation-b5005.appspot.com"
+    "project_number": "1007126676263",
+    "project_id": "navigation-4ceb1",
+    "storage_bucket": "navigation-4ceb1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:24958899482:android:587ae84b8861a3bcbd08a3",
+        "mobilesdk_app_id": "1:1007126676263:android:c2efb49099ff57e5c29f02",
         "android_client_info": {
           "package_name": "mrandroid.app"
         }
@@ -16,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCH7gCfYmhEi6wXbGOsMQ6sW8v5j--eCpc"
+          "current_key": "AIzaSyApPDTpMyeQo2ehdW1jNfySFWQ3qAljKhs"
         }
       ],
       "services": {
