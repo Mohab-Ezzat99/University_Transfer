@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 
@@ -61,11 +62,9 @@ public class HomeActivity extends AppCompatActivity implements EasyPermissions.P
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
-        mMap.setMyLocationEnabled(true);
         mMap.setOnMarkerClickListener(this);
         boolean hasLocationPermission = LocationPermission.requestLocationPermission(this);
         if (hasLocationPermission && checkGpsEnabled()) {
-            fetchCurrentLocation();
             drawFacultiesMarkers();
         }
     }
@@ -97,7 +96,6 @@ public class HomeActivity extends AppCompatActivity implements EasyPermissions.P
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 200) {
             if (checkGpsEnabled()) {
-                fetchCurrentLocation();
                 drawFacultiesMarkers();
             }
         }
@@ -106,7 +104,6 @@ public class HomeActivity extends AppCompatActivity implements EasyPermissions.P
     @Override
     public void onPermissionsGranted(int requestCode, @NonNull List<String> perms) {
         if (checkGpsEnabled()) {
-            fetchCurrentLocation();
             drawFacultiesMarkers();
         }
     }
@@ -137,16 +134,21 @@ public class HomeActivity extends AppCompatActivity implements EasyPermissions.P
     }
 
     private void drawFacultiesMarkers() {
-        for (FacultyModel hospital : faculties) {
-            LatLng markerPosition = new LatLng(hospital.getLat(), hospital.getLng());
+        for (FacultyModel faculty : faculties) {
+            LatLng markerPosition = new LatLng(faculty.getLat(), faculty.getLng());
             allMarkers.add(markerPosition);
             mMap.addMarker(new MarkerOptions().position(markerPosition));
         }
+        LatLng targetPosition = new LatLng(faculties.get(0).getLat(), faculties.get(0).getLng());
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(targetPosition, 17f));
     }
 
     @Override
     public boolean onMarkerClick(@NonNull Marker marker) {
-//        marker.getPosition();
+        Uri uri = Uri.parse("google.navigation:q=" + marker.getPosition().latitude + "," + marker.getPosition().longitude);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        intent.setPackage("com.google.android.apps.maps");
+        startActivity(intent);
         return false;
     }
 }

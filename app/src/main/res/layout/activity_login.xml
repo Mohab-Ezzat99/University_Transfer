@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
@@ -80,30 +81,14 @@
             android:backgroundTint="?attr/colorPrimaryVariant"
             android:paddingVertical="@dimen/_8sdp"
             android:text="Login"
+            android:layout_marginTop="@dimen/_16sdp"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="@dimen/_12ssp"
-            android:layout_marginTop="@dimen/_12sdp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/itl_email"
             app:layout_constraintStart_toStartOf="@+id/itl_email"
-            app:layout_constraintTop_toBottomOf="@+id/tv_forgot" />
-
-        <TextView
-            android:id="@+id/tv_forgot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:text="Forgot password?"
-            android:textColor="?attr/colorPrimaryVariant"
-            android:textSize="@dimen/_12ssp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/itl_password"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toStartOf="@+id/itl_email"
-            app:layout_constraintTop_toBottomOf="@+id/itl_password"
-            app:layout_constraintVertical_bias="0" />
+            app:layout_constraintTop_toBottomOf="@+id/itl_password" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
