@@ -20,6 +20,7 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySignupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         loadingDialog = new LoadingDialog(this);
 
         binding.btnRegister.setOnClickListener(view -> {
